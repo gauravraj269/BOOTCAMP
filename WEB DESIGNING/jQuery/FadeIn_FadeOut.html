@@ -1,0 +1,50 @@
+<html>
+	<head>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$("#FadeOut").attr("disabled",true);
+			
+				$("#FadeIn").click(function(){
+					if(confirm("Are You Sure..??"))
+					{
+						$("#Div1").fadeIn(1000);
+						$("#Div2").fadeIn(2000);
+						$("#Div3").fadeIn(3000);
+						$("#FadeOut").attr("disabled",false);
+						$(this).attr("disabled",true);
+					}
+				});
+				$("#FadeOut").click(function(){
+					if(confirm("Are You Sure..??"))
+					{
+						$("#Div1").fadeOut(1000);
+						$("#Div2").fadeOut(2000);
+						$("#Div3").fadeOut(3000);
+						$("#FadeIn").attr("disabled",false);
+						$(this).attr("disabled",true);
+					}
+				});
+				$("#FadeToggle").click(function(){
+					if(confirm("Are You Sure..??"))
+					{
+						$("#Div1").fadeToggle(1000);
+						$("#Div2").fadeToggle(2000);
+						$("#Div3").fadeToggle(3000);
+					}
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<button id="FadeIn">Click Me For Fade In</button><button id="FadeOut">Click Me For Fade Out</button><button id="FadeToggle">Click Me For Fade In / Out Toggle</button>
+		<div id="Div1" style="height:100px;width:100px;background-color:Navy;display:none;"></div><br />
+		<div id="Div2" style="height:100px;width:100px;background-color:Red;display:none;"></div><br />
+		<div id="Div3" style="height:100px;width:100px;background-color:Yellow;display:none;"></div><br />
+	</body>
+
+</html>
